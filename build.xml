@@ -9,17 +9,19 @@
 	<!-- * Property Definitions * -->
 	<!-- ************************ -->
 
-	<property name="stick" value="/media/HAMY-4GB" />
+	<property file="local-build.properties" />
 	<property name="app" value="bin/Sudoku01.apk" />
 	<property name="dev" value="/dev/sdc1" />
 
 	<target name="clean">
+		<fail unless="stick" />
 		<delete includeemptydirs="true">
 			<fileset dir="${stick}" includes="**/*" />
 		</delete>
 	</target>
 
 	<target name="all" depends="clean">
+		<fail unless="stick" />
 		<copy todir="${stick}" file="${app}" />
 		<exec executable="umount">
 			<arg value="${dev}" />
