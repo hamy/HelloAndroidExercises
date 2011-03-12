@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Sudoku01" default="all" basedir=".">
+
+	<!-- ************************************* -->
+	<!-- * Project "Sudoku01" Build File * -->
+	<!-- ************************************* -->
+
+	<!-- ************************ -->
+	<!-- * Property Definitions * -->
+	<!-- ************************ -->
+
+	<property name="stick" value="/media/HAMY-4GB" />
+	<property name="app" value="bin/Sudoku01.apk" />
+	<property name="dev" value="/dev/sdc1" />
+
+	<target name="clean">
+		<delete includeemptydirs="true">
+			<fileset dir="${stick}" includes="**/*" />
+		</delete>
+	</target>
+
+	<target name="all" depends="clean">
+		<copy todir="${stick}" file="${app}" />
+		<exec executable="umount">
+			<arg value="${dev}" />
+		</exec>
+	</target>
+
+</project>
