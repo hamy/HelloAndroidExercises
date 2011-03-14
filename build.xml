@@ -23,10 +23,10 @@
 	<target name="all" depends="clean">
 		<fail unless="stick" />
 		<copy todir="${stick}" file="${app}" />
-		<!--
+		 
 		<exec executable="umount">
 			<arg value="${dev}" />
-		</exec> -->
+		</exec>  
 	</target>
 
 </project>

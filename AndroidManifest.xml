@@ -14,6 +14,7 @@
 		</activity>
 		<activity android:name=".About" android:label="@string/about_title"
 			android:theme="@android:style/Theme.Dialog" />
-		<activity android:name=".Prefs" android:label="@string/settings_title" />
+        <activity android:name=".Prefs" android:label="@string/settings_title" />
+        <activity android:name=".Graphics" android:label="@string/graphics_title" />
 	</application>
 </manifest>

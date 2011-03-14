@@ -32,6 +32,9 @@ public class SudokuMain extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
+		case R.id.continue_button:
+ 			startActivity(new Intent(this,Graphics.class));
+			break;
 		case R.id.about_button:
 			Intent intent = new Intent(this, About.class);
 			startActivity(intent);
